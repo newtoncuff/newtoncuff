@@ -120,10 +120,7 @@
 				{% block content %}{% endblock %}
                 <div class="col-3">
                     <div class="section-heading">
-                        <h2 class="section-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</h2>
-                        <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
+                        <h2 class="section-title">Use the following links to navigate the madness. Be careful as you might find you've gone down a rabbit hole and eventually you will have to find your way out....</h2>
                     </div>
 
                 </div>
@@ -134,13 +131,12 @@
                     <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
                         <!--Icon-->
                         <div class="icon">
-                            <i class="fa fa-html5 fa-2x"></i>
+                            <i class="fa fa-comment-o fa-2x"></i>
                         </div>
                         <!--Icon Block Description-->
                         <div class="icon-block-description">
-                            <h4>HTML5 &amp; CSS3</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
+                            <h4><a href="{{ url_for('navigation_thoughts') }}">Thoughts</a></h4>
+                            <p>Try and keep up with the random thoughts that invade my head and lead to the randomness that ensues</p>
                         </div>
                     </div>
                     <!--End of Icon Block-->
@@ -149,13 +145,12 @@
                     <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.3s">
                         <!--Icon-->
                         <div class="icon">
-                            <i class="fa fa-bolt fa-2x"></i>
+                            <i class="fa fa-heart fa-2x"></i>
                         </div>
                         <!--Icon Block Description-->
                         <div class="icon-block-description">
-                            <h4>Easy to Use</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
+                            <h4><a href="{{ url_for('navigation_passions') }}">Passions</a></h4>
+                            <p>I treasures these more than words can describe. They are my joy, frustration and provide motivation</p>
                         </div>
                     </div>
                     <!--End of Icon Block-->
@@ -164,13 +159,12 @@
                     <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.5s">
                         <!--Icon-->
                         <div class="icon">
-                            <i class="fa fa-tablet fa-2x"></i>
+                            <i class="fa fa-ban fa-2x"></i>
                         </div>
                         <!--Icon Block Description-->
                         <div class="icon-block-description">
-                            <h4>Fully Responsive</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
+                            <h4><a href="{{ url_for('navigation_delusions') }}">Delusions</a></h4>
+                            <p>These are my ramblings manifested into words, my theories and ideas. Here you will find everything else</p>
                         </div>
                     </div>
                     <!--End of Icon Block-->
@@ -179,13 +173,12 @@
                     <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.5s">
                         <!--Icon-->
                         <div class="icon">
-                            <i class="fa fa-rocket fa-2x"></i>
+                            <i class="fa fa-smile-o fa-2x"></i>
                         </div>
                         <!--Icon Block Description-->
                         <div class="icon-block-description">
-                            <h4>Parallax Effect</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
+                            <h4><a href="{{ url_for('navigation_interests') }}">Interests</a></h4>
+                            <p>My interests have been described as seasonal so follow me as i grow, learn, explore, experiment and discover</p>
                         </div>
                     </div>
                     <!--End of Icon Block-->
@@ -194,10 +187,8 @@
 
             </div>
 
-
         </section>
         <!--End of Introduction-->
-
 
         <!--Gallery-->
         <aside id="gallery" class="row text-center scrollto clearfix" data-featherlight-gallery
