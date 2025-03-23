@@ -1,0 +1,16 @@
+nohup: ignoring input
+[2025-03-07 00:17:41 +0000] [3164] [INFO] Starting gunicorn 23.0.0
+[2025-03-07 00:17:41 +0000] [3164] [INFO] Listening at: http://0.0.0.0:5002 (3164)
+[2025-03-07 00:17:41 +0000] [3164] [INFO] Using worker: sync
+[2025-03-07 00:17:41 +0000] [3165] [INFO] Booting worker with pid: 3165
+[2025-03-07 00:17:41 +0000] [3166] [INFO] Booting worker with pid: 3166
+[2025-03-07 00:17:42 +0000] [3167] [INFO] Booting worker with pid: 3167
+[2025-03-07 00:17:42 +0000] [3168] [INFO] Booting worker with pid: 3168
+[2025-03-07 01:13:50 +0000] [3167] [INFO] Parent changed, shutting down: <Worker 3167>
+[2025-03-07 01:13:50 +0000] [3167] [INFO] Worker exiting (pid: 3167)
+[2025-03-07 01:13:51 +0000] [3165] [INFO] Parent changed, shutting down: <Worker 3165>
+[2025-03-07 01:13:51 +0000] [3165] [INFO] Worker exiting (pid: 3165)
+[2025-03-07 01:13:51 +0000] [3168] [INFO] Parent changed, shutting down: <Worker 3168>
+[2025-03-07 01:13:51 +0000] [3168] [INFO] Worker exiting (pid: 3168)
+[2025-03-07 01:13:51 +0000] [3166] [INFO] Parent changed, shutting down: <Worker 3166>
+[2025-03-07 01:13:51 +0000] [3166] [INFO] Worker exiting (pid: 3166)

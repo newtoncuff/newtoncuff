@@ -1,0 +1,22 @@
+services:
+  newtoncuff_webapp:
+    container_name: newtoncuff_webapp  # Specify the container name
+    build:
+      context: ./flask_app
+      dockerfile: Dockerfile
+    environment:
+      - FLASK_ENV=production
+      - SQLALCHEMY_DATABASE_URI="mssql+pyodbc://sa:AmiraBellaCuff2022$@192.168.1.108:1433/test_db"
+    restart: always
+    ports:
+      - '80:80'
+
+  newtoncuff_api:
+    container_name: newtoncuff_api  # Specify the container name
+    build:
+      context: ./api_app
+      dockerfile: Dockerfile
+    environment:
+      - SQLALCHEMY_DATABASE_URI="mssql+pyodbc://sa:AmiraBellaCuff2022$@192.168.1.108:1433/test_db"
+    ports:
+      - '81:80'
