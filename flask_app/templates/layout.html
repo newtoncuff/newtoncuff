@@ -83,6 +83,18 @@
                             <li>
                                 <a href="#gallery">Gallery</a>
                             </li>
+                            <li>
+                                <a href="{{ url_for('thoughts.index') }}">Thoughts</a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('passions.index') }}">Passions</a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('delusions.index') }}">Delusions</a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('interests.index') }}">Interests</a>
+                            </li>
                         </ul>
                     </nav>
                     <!--End of Main Navigation-->
@@ -116,7 +128,6 @@
         <section id="about" class="introduction scrollto">
 
             <div class="row clearfix">
-				{% block content %}{% endblock %}
                 <div class="col-3">
                     <div class="section-heading">
                         <h2 class="section-title">Use the following links to navigate the madness. Be careful as you might find you've gone down a rabbit hole and eventually you will have to find your way out....</h2>
@@ -208,7 +219,6 @@
 
         </aside>
         <!--End of Gallery-->
-
     </main>
     <!--End Main Content Area-->
 
@@ -259,8 +269,6 @@
 <!-- Include JavaScript resources -->
 <script src="{{ url_for('static', filename='js/jquery.1.8.3.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
-<script src="{{ url_for('static', filename='js/featherlight.min.js') }}"></script>
-<script src="{{ url_for('static', filename='js/featherlight.gallery.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/jquery.enllax.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/jquery.scrollUp.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>

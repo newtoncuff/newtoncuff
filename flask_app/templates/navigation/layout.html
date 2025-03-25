@@ -75,7 +75,25 @@
                     <nav id="nav-main">
                         <ul>
                             <li>
-                                <a href="#banner">Home</a>
+                                <a href="{{ url_for('main.home') }}">Home</a>
+                            </li>
+                            <li>
+                                <a href="#about">About</a>
+                            </li>
+                            <li>
+                                <a href="#gallery">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('thoughts.index') }}">Thoughts</a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('passions.index') }}">Passions</a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('delusions.index') }}">Delusions</a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('interests.index') }}">Interests</a>
                             </li>
                         </ul>
                     </nav>
@@ -104,17 +122,9 @@
     </header>
 
     <!--Main Content Area-->
-    <main id="content">
+    <main class="row clearfix" style="padding: 0px;">
 
-        <!--Introduction-->
-        <section id="about" class="introduction scrollto">
-
-            <div class="row clearfix">
-				{% block content %}{% endblock %}
-            </div>
-
-        </section>
-        <!--End of Introduction-->
+        {% block content %}{% endblock %}
 
     </main>
     <!--End Main Content Area-->
