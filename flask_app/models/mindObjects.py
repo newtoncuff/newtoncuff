@@ -1,5 +1,4 @@
 from . import db
-from sqlalchemy.ext.declarative import declared_attr
 
 class MindObject(db.Model):
     """
