@@ -1,5 +1,4 @@
 from .mindObjects import MindObject
-from . import db
 
 class Delusion(MindObject):
     """

@@ -1,8 +1,7 @@
+from flask import Flask
 from database import database_schema
 from database import database_config
-from flask import Flask, render_template
 from models import db
-from models import User
 from controllers import register_controllers
 
 def create_app():
