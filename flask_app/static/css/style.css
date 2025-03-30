@@ -133,24 +133,83 @@ figure {
     position: relative;
 }
 
-#nav-main li a {
+/* Navigation link hover animation */
+#nav-main ul li a {
     position: relative;
     text-decoration: none;
+    padding-bottom: 5px;
+  }
+  
+#nav-main ul li a:before {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: 0;
+left: 0;
+background-color: #d2b356;
+visibility: hidden;
+transition: all 0.3s ease-in-out;
 }
 
-#nav-main li a:after {
+#nav-main ul li a:hover:before {
+visibility: visible;
+width: 100%;
+}
+
+/* For active/current page */
+#nav-main ul li a.active:before {
+visibility: visible;
+width: 100%;
+}
+
+/* Icon block link hover effect */
+.icon-block-description h4 a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .icon-block-description h4 a:after {
     content: '';
     position: absolute;
     width: 0;
-    height: 3px;
-    background: #d2b356;
+    height: 2px;
+    bottom: -3px;
     left: 0;
-    bottom: -5px;
+    background-color: #d2b356;
     transition: width 0.3s ease;
-}
-
-#nav-main li a:hover:after {
+    opacity: 0;
+  }
+  
+  .icon-block-description h4 a:hover {
+    color: #d2b356;
+  }
+  
+  .icon-block-description h4 a:hover:after {
     width: 100%;
+    opacity: 1;
+  }
+  
+  /* Optional: add a subtle icon animation */
+  .icon-block:hover .icon i {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    animation: pulse 1s infinite;
+  }
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
 }
 
 /* --------- 1.1 Input Elements ---------- */
@@ -1415,8 +1474,7 @@ blockquote {
 .client-overlay {
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
-    top;
-    0;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
