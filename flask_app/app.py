@@ -1,3 +1,6 @@
+import sys
+sys.dont_write_bytecode = True
+
 from flask import Flask
 from database import database_schema
 from database import database_config
