@@ -11,10 +11,10 @@ admin_controller = Blueprint('admin', __name__, url_prefix='/admin')
 
 @admin_controller.route('/')
 def index():
-    """Admin dashboard homepage"""
-    return render_template('admin/index.html', 
-                           title="Admin Dashboard",
-                           subtitle="Manage your database objects")
+    title = "Newton Cuff"
+    titleHeader = "Admin Dashboard"
+    titleSubHeader = "Manage your database objects"
+    return render_template('admin/index.html', title=title, titleHeader=titleHeader, titleSubHeader=titleSubHeader)
 
 @admin_controller.route('/tables')
 def list_tables():
