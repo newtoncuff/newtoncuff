@@ -44,7 +44,14 @@ $(document).ready(function () {
 			$('#header').removeClass('nav-solid fadeInDown');
 		}
 	});
+});
 
+$(window).on('scroll', function() {
+	if ($(window).scrollTop() > 100) {
+	  $('#header').addClass('sticky');
+	} else {
+	  $('#header').removeClass('sticky');
+	}
 });
 
 
@@ -63,5 +70,46 @@ $(window).load(function () { // makes sure the whole site is loaded
 	if (!!$.prototype.enllax) {
 		$(window).enllax();
 	}
+});
 
+// Add this to the end of your site.js file
+document.addEventListener('DOMContentLoaded', function() {
+    // Debug
+    console.log("Navigation active link script running");
+    
+    // Get current path
+    var currentPath = window.location.pathname;
+    console.log("Current path:", currentPath);
+    
+    // Log all nav links to verify selector
+    var navLinks = document.querySelectorAll('#nav-main ul li a');
+    console.log("Found nav links:", navLinks.length);
+    
+    // Remove active class from all links
+    navLinks.forEach(function(link) {
+        link.classList.remove('active');
+        console.log("Removed active class from:", link.textContent);
+    });
+    
+    // Add active class to matching link
+    navLinks.forEach(function(link) {
+        var href = link.getAttribute('href');
+        console.log("Checking link:", href);
+        
+        // Skip # links except on homepage
+        if (href && href.charAt(0) === '#' && currentPath === '/') {
+            console.log("Home page hash link:", href);
+            if (href === '#banner' || href === '#about') {
+                link.classList.add('active');
+                console.log("Added active class to:", link.textContent);
+            }
+        } 
+        // Regular links
+        else if (href && href.charAt(0) !== '#') {
+            if (currentPath === href || (href !== '/' && currentPath.indexOf(href) === 0)) {
+                link.classList.add('active');
+                console.log("Added active class to:", link.textContent);
+            }
+        }
+    });
 });

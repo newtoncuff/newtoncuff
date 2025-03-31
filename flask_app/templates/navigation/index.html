@@ -1,33 +1,38 @@
-{% extends "navigation/subLayout.html" %}
+{% extends "layout.html" %}
 
 {% block css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/navigation/styles.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/navigation/index.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/navigation/styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/navigation/index.css') }}">
 {% endblock %}
 
-{% block titleHeader %}{{ titleHeader }}{% endblock %}
-{% block titleSubHeader %}{{ titleSubHeader }}{% endblock %}
+{% block titleHeader %}
+  {{ titleHeader }}
+{% endblock %}
+
+{% block titleSubHeader %}
+  {{ titleSubHeader }}
+{% endblock %}
 
 {% block content %}
-<div class="card-container" id="cards">
-  <!-- Cards will be inserted here by JavaScript -->
-</div>
+  <div class="card-container" id="cards">
+    <!-- Cards will be inserted here by JavaScript -->
+  </div>
 
-<!-- Modal Container -->
-<div class="modal-overlay" id="cardModal">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <div class="modal-body">
-      <!-- Modal content will be inserted here by JavaScript -->
+  <!-- Modal Container -->
+  <div class="modal-overlay" id="cardModal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-body">
+        <!-- Modal content will be inserted here by JavaScript -->
+      </div>
     </div>
   </div>
-</div>
 {% endblock %}
 
 {% block js %}
-<script>
-  // Define a global variable with the URL that JavaScript can access
-  window.mindObjectDataUrl = "{{ url_for(mindObjectType|lower ~ '.get_data') }}";
-</script>
-<script src="{{ url_for('static', filename='index.js') }}"></script>
+  <script>
+    // Define a global variable with the URL that JavaScript can access
+    window.mindObjectDataUrl = "{{ url_for(mindObjectType|lower ~ '.get_data') }}";
+  </script>
+  <script src="{{ url_for('static', filename='js/navigation/index.js') }}"></script>
 {% endblock %}
