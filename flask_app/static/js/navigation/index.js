@@ -35,9 +35,12 @@ style.textContent = `
     
     // Function to load all cards at once
     function loadAllCards() {
-        // Use the data endpoint from your controller
-        const url = window.mindObjectDataUrl;
-        console.log('Fetching data from:', url);
+        // Get the object type from the URL
+        const pathParts = window.location.pathname.split('/');
+        const objectType = pathParts[1]; // e.g., 'thoughts', 'passions', etc.
+        
+        // Construct URL for data fetch
+        const url = `/${objectType}/data`;
         
         fetch(url)
             .then(response => {

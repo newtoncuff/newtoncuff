@@ -87,19 +87,31 @@
                                 <a >About</a>
                             </li>
                             <li>
-                                <a href="{{ url_for('thoughts.index') }}">Thoughts</a>
+                                <a href="{{ url_for('mind_object.index', object_type='thoughts') }}">Thoughts</a>
                             </li>
                             <li>
-                                <a href="{{ url_for('passions.index') }}">Passions</a>
+                                <a href="{{ url_for('mind_object.index', object_type='passions') }}">Passions</a>
                             </li>
                             <li>
-                                <a href="{{ url_for('delusions.index') }}">Delusions</a>
+                                <a href="{{ url_for('mind_object.index', object_type='delusions') }}">Delusions</a>
                             </li>
                             <li>
-                                <a href="{{ url_for('interests.index') }}">Interests</a>
+                                <a href="{{ url_for('mind_object.index', object_type='interests') }}">Interests</a>
                             </li>
                             <li>
                                 <a href="{{ url_for('admin.index') }}">Admin</a>
+                            </li>
+                            <li>
+                                <a >Stories</a>
+                            </li>
+                            <li>
+                                <a >Funnies</a>
+                            </li>
+                            <li>
+                                <a >Hobbies</a>
+                            </li>
+                            <li>
+                                <a >Projects</a>
                             </li>
                         </ul>
                     </nav>
